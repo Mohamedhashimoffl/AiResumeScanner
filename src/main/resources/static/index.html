@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Scanner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Resume Scanner</h1>
+
+    <label>Upload Resume (PDF)</label>
+    <input type="file" id="resumeFile" accept=".pdf">
+
+    <label>Job Description</label>
+    <textarea id="jobDescription" rows="6"
+              placeholder="Paste job description here..."></textarea>
+
+    <button id ="scanBtn" onclick="scanResume()">Scan Resume</button>
+
+    <div id="result" class="hidden">
+        <h2>Result</h2>
+        <p><strong>Match Percentage:</strong> <span id="matchPercentage"></span>%</p>
+
+        <h3>Missing Skills</h3>
+        <ul id="missingSkills"></ul>
+
+        <h3>AI Suggestions</h3>
+        <ul id="aiSuggestions"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
